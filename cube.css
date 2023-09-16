@@ -1,0 +1,99 @@
+.cubewrap{ position: relative;
+   height: 100vh;
+    width: 100vw;
+      /* background-color: black; */
+      display: flex; 
+      /* flex-direction: column;  */
+      
+       justify-content: center;
+       animation: color 5s linear infinite;
+}
+.o{
+
+    position: absolute;
+   
+    top: 45vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+.o:nth-child(1){
+    /* top: 35vh;
+    left: 40vw; */
+    transform: translate(-12vh,-7.5vh);
+    z-index: 1;
+}
+.o:nth-child(2){
+    /* top: 55vh;
+    left: 60vw; */
+    transform: translate(12vh,7.5vh);
+    z-index: 3;
+   
+}
+.r{ position: absolute;
+    height: 10vh;
+    width: 37.5vh;
+     top: var(--gap) ;
+    justify-content: space-between;
+    /* background-color: aliceblue; */
+    display: flex;
+transform-style: preserve-3d;
+     transform: skewY(-20deg);
+     z-index: var(--ind);
+}
+
+.r1{  position: relative;
+    
+  
+    height: 10vh;
+    width: 10vh;
+   /* z-index: -4; */
+    background-color: rgb(196, 195, 196);
+   /* transform: skewY(-20deg); */
+   transition: 1.5s;
+   z-index: var(--yind);
+   
+}
+.r1::before{ content: '';
+    position: absolute;
+    height: 10vh;
+    width: 8.5vh;
+    background-color: rgb(248, 246, 249);
+    transform-origin: right;
+    transform: translateX(-8.5vh) skewY(45deg);
+    z-index: -2;
+   /* z-index: -5; */
+   transition: 1.5s;
+}
+.r1::after{ content: '';
+    position: absolute;
+    height: 8.5vh;
+    width: 100%;
+    background-color: rgb(221, 220, 222);
+    transform-origin: bottom;
+    transform:   translateY(-8.5vh) skewX(45deg) ;
+/* z-index: 9; */
+    /* z-index: -1; */
+    transition: 1.5s;
+}
+.r1:hover{ transition: 0s;
+    background-color: rgb(188, 40, 40);
+    filter: drop-shadow(0px 0px 30px rgb(188, 40, 40) );
+}
+.r1:hover::after{ transition: 0s;
+    background-color: rgb(229, 52, 52);
+}
+.r1:hover::before{ z-index: -6;
+    transition: 0s;
+    background-color: rgb(252, 65, 65);
+}
+@keyframes color {
+    0%{
+        filter:hue-rotate(0deg);
+    }
+    100%{
+        filter:hue-rotate(360deg);
+    }
+    
+}

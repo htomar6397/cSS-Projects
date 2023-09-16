@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="ball.css" />
+  </head>
+  <body>
+    <audio id="audio"  src="ball.mp3"></audio>
+    <div class="cobt">
+      <div class="vol">🔇</div>
+      <div class="container-ball">
+        <div class="ball"></div>
+        <div class="cube">
+          <div class="front"></div>
+          <div class="back"></div>
+          <div class="left"></div>
+          <div class="right"></div>
+          <div class="top">
+            <div class="sh"></div>
+          </div>
+          <div class="bottom"></div>
+        </div>
+        <div class="floor"></div>
+      </div>
+    </div>
+    <script>
+      let vol = document.querySelector(".vol");
+      let volum = document.querySelector(".cobt");
+      let bal = document.querySelector("#audio");
+      const interval = setInterval(function () {
+        
+        bal.play();
+      }, 1000);
+      bal.volume=0;
+      bal.play();
+      
+    
+        interval;
+      
+      volum.addEventListener("click", function () {
+        if (vol.innerHTML === "🔊") {
+          vol.innerHTML = "🔇";
+          bal.volume = 0;
+        } else {
+          vol.innerHTML = "🔊";
+          bal.volume = 0.5;
+        
+        }
+      });
+
+      // setInterval(function(){bal.play();},1000);
+    </script>
+  </body>
+</html>

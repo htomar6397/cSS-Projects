@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css" />
+
+     <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+   <script>
+      $(function() {
+         $(".cal").load("calculator.html");
+         $(".cali").load("ball.html");
+         $(".clo").load("clock.html");
+          $(".cub").load("cube.html");
+      });</script>
+  </head>
+  <body>
+   
+    <div class="qwerty">
+    <div class="container">
+      <div class="q">
+        <div class="roww3"></div>
+        <div class="roww4"></div>
+        <div class="roww0"></div>
+        <div class="roww1"></div>
+        <div class="roww2"></div>
+        <div class="roww5"></div>
+      </div>
+     
+    </div>
+     <div class="nav">
+        <ul>
+          <li class="green1 " style="--i: 6; --c: green; --q:g"><span>green</span></li>
+          <li class="red1" style="--i: 5; --c: red; --q:r"><span>red</span></li>
+          <li class="pink1" style="--i: 4; --c: pink; --q:p"><span>pink</span></li>
+          <li class="yellow1" style="--i: 3; --c: yellow; --q:y"><span>yellow</span></li>
+          <li class="blue1" style="--i: 2; --c: blue; --q:b"><span>blue</span></li>
+          <li class="orange1" style="--i: 1; --c: orange; --q:o"><span>orange</span></li>
+        </ul>
+      </div>
+      </div>
+      <div class="wrap">
+      <div class="cal"></div>
+      <div class="cali"></div></div>
+      <div class="wrap1">
+      <div class="cubexx">
+       <div class="cub"></div> <!-- <iframe src="cube.html" style="height:40vh;width:50vh" title="Iframe Example"></iframe> -->
+      </div>
+      <div class="cubexxx">
+        <div class="clo"></div> <!-- <iframe src="clock.html" style="height:50vh;width:50vh" title="Iframe Example"></iframe> -->
+      </div>
+      </div>
+      <script src="script.js"></script>
+  </body>
+</html>
